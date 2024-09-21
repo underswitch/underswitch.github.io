@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 퀴즈</title>
+    <script>
+        function startQuiz() {
+            var k = {우변기: '우변기' + '28세'};
+            var score = 0;
+
+            for (var key in k) {
+                var a = prompt(key + '의 뜻은?');
+                var a = prompt(key + '의 나이는?');
+                if (userAnswer === k[key]) {
+                    score++;
+                    alert('정답입니다!');
+                } else {
+                    alert('틀렸습니다. 정답은 ' + k[key] + '입니다.');
+                }
+            }
+
+            alert('최종 점수: ' + score);
+        }
+    </script>
+</head>
+<body>
+    <h1>단어 퀴즈에 오신 것을 환영합니다!</h1>
+    <button onclick="startQuiz()">퀴즈 시작하기</button>
+</body>
+</html>
